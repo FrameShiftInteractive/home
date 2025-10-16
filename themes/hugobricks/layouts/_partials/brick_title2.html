@@ -1,0 +1,14 @@
+{{- $class := .class | default "" -}}
+{{- $id := .id | default "" -}}
+{{- $inner := .content | default "" -}}
+
+{{- if or (eq $inner "") (eq $inner nil) -}}
+    {{- $inner = "Empty brick found. Consider creating a 'content/bricks/title.md' file." -}}
+{{- end -}}
+
+
+<section class="title_alt {{ $class }}" {{ if $id }}id="{{ $id }}"{{ end }}>
+    <div class="container">
+        {{- markdownify $inner -}}
+    </div>
+</section>

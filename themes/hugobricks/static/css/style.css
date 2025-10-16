@@ -1,0 +1,319 @@
+@import "fonts.css";
+@import "base.css";
+@import "header-footer.css";
+@import "bricks.css";
+
+/*------------------------*/
+/* theme colors
+/*------------------------*/
+
+:root {
+    --textDarker: rgb(3, 7, 18);
+    --textDark: rgba(68, 68, 68, 1);
+    --textMedium: rgba(68, 68, 68, 0.7);
+    --borderMedium: rgba(68, 68, 68, 0.2); 
+    --borderLight: rgba(68, 68, 68, 0.075);
+    --accent: rgb(34, 78, 238);
+    --accentDarker: rgb(0, 0, 238);
+    --light: rgba(68, 68, 68, 0.035);
+    --white-color: rgb(243, 244, 246);
+}
+/*------------------------*/
+/* turn grayscale off
+/*------------------------*/
+
+img {filter: grayscale(0);}
+
+/*------------------------*/
+/* colorize_image
+/*------------------------*/
+
+.colorize_image {filter: contrast(1) sepia(1) hue-rotate(160deg) grayscale(0.8)!important;}
+
+/*------------------------*/
+/* black_2_textDark
+/*------------------------*/
+
+.map:not(section)::after, .black_2_textDark {filter: grayscale(100%);}
+
+/*------------------------*/
+/* black_2_textMedium
+/*------------------------*/
+
+.black_2_textMedium {filter: contrast(0.3) sepia(0.3) hue-rotate(160deg) brightness(1.4)!important;}
+
+/*------------------------*/
+/* black_2_accent
+/*------------------------*/
+
+.black_2_accent {filter: contrast(0.11) sepia(1) hue-rotate(0deg) contrast(13)!important;}
+
+
+/*------------------------ CSS overrides below ------------------------*/
+
+.innerbody{
+    background: var(--textDarker)
+}
+
+footer.dark a.logo{
+    color: var(--white-color)
+}
+
+footer.dark{
+    background-color: var(--textDarker);
+}
+
+a.logo img.inline {
+    height: 3.25rem;
+}
+
+body.mobilemenu header > div.container > div:nth-child(1){
+    z-index: 100;
+}
+
+.title h1{
+    color: var(--white-color);
+    font-weight: 400;
+    letter-spacing: -0.05em;
+    font-size: 5rem;
+    text-align: left;
+}
+
+section .container.small{
+    max-width: 50rem;
+}
+
+section.small .container.small p{
+    color: var(--white-color);
+    opacity: .5;
+}
+
+body.mobilemenu section.title section.wide{
+    display: none;
+}
+
+/* Title Alt */
+
+body.mobilemenu section.title_alt .container{
+    display: block;
+}
+
+section.title_alt > .container{
+    display: flex;
+    gap: 10rem;
+    padding-top: 5rem;
+}
+
+section.title_alt .container h3{
+    padding-top: 0;
+    padding-bottom: 3rem;
+    min-width: 6rem;
+}
+
+section.title_alt .container p{
+    font-size: 2.5rem;
+    line-height: 2.75rem;
+    letter-spacing: -.15rem;
+}
+
+/* Service Grid */
+
+.service_grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: 2rem;
+}
+
+.service_grid p{
+    font-size: 1rem !important;
+    line-height: 1.5rem !important;
+    letter-spacing: normal !important;
+    margin-bottom: 0;
+}
+
+.service_grid hr{
+    margin: 0;
+    background: var(--textMedium);
+    opacity: 0.65;
+}
+
+.service_grid > *:nth-child(2n + 2){
+    color: var(--white-color) !important;
+    opacity: .65;
+}
+
+/* Software Logos */
+
+body.mobilemenu .software .wide > .container{
+    width:auto;
+    margin: auto;
+}
+
+.software .wide{
+    padding: 0;
+}
+
+.logo-slider {
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 12.5%, rgb(0, 0, 0) 87.5%, rgba(0, 0, 0, 0) 100%);;
+}
+
+.logo-track {
+    display: flex;
+    gap: 0rem;
+    animation: scroll 40s linear infinite;
+    width: max-content;
+}
+
+.logo-track img {
+    height: 5rem;
+    object-fit: contain;
+    filter: invert(1);
+    transition: all 0.3s ease;
+    min-width: 10rem;
+}
+
+
+@keyframes scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
+
+/* Bubbles*/
+
+.wide h4{
+    z-index: -10;
+    aspect-ratio: 1;
+    background-color: #030712;
+    height: 10vw;
+    border-radius: 158%;
+    position: absolute;
+    overflow: auto;
+    transform: translate(-50%,-50%);
+    box-shadow: inset 8px 16px 32px -10px #ffffff40;
+    color: transparent;
+}
+
+.wide > .container > h4:nth-child(1){
+    z-index: -2;
+    top: 45%;
+    left: 3%;
+}
+.wide > .container > h4:nth-child(2){
+    z-index: -1;
+    top: 64%;
+    left: 12%;
+    background: var(--accent);
+    box-shadow: inset 0px 24px 40px 0px #bed5ff ,0px -.48175px 2.21605px 0px #5e95fc0f,0px -1.83083px 8.4218px 0px #5e95fc3b,0px -8px 36.8px 0px #5e95fc;
+}
+.wide > .container > h4:nth-child(3){
+    z-index: -3;
+    top: 39%;
+    left: 15%;
+}
+.wide > .container > h4:nth-child(4){
+    z-index: -11;
+    top: 44%;
+    left: 24%;
+}
+.wide > .container > h4:nth-child(5){
+    z-index: -4;
+    top: 59%;
+    left: 25%;
+}
+.wide > .container > h4:nth-child(6){
+    z-index: -5;
+    top: 71%;
+    left: 31%;
+}
+.wide > .container > h4:nth-child(7){
+    z-index: -10;
+    top: 29%;
+    left: 35%;
+}
+.wide > .container > h4:nth-child(8){
+    z-index: -8;
+    top: 44%;
+    left: 36%;
+}
+.wide > .container > h4:nth-child(9){
+    z-index: -11;
+    top: 64%;
+    left: 41%;
+}
+.wide > .container > h4:nth-child(10){
+    z-index: -9;
+    background: var(--accent);
+    box-shadow: inset 0px 24px 40px 0px #bed5ff ,0px -.48175px 2.21605px 0px #5e95fc0f,0px -1.83083px 8.4218px 0px #5e95fc3b,0px -8px 36.8px 0px #5e95fc;
+    top: 22%;
+    left: 43%;
+}
+.wide > .container > h4:nth-child(11){
+    z-index: -7;
+    top: 40%;
+    left: 48%;
+}
+.wide > .container > h4:nth-child(12){
+    z-index: -6;
+    top: 48%;
+    left: 56%;
+}
+.wide > .container > h4:nth-child(13){
+    z-index: -5;
+    top: 71%;
+    left: 61%;
+}
+.wide > .container > h4:nth-child(14){
+    z-index: -4;
+    top: 41%;
+    left: 68%;
+}
+.wide > .container > h4:nth-child(15){
+    z-index: -3;
+    top: 62%;
+    left: 72%;
+}
+.wide > .container > h4:nth-child(16){
+    z-index: -5;
+    top: 29%;
+    left: 74%;
+}
+.wide > .container > h4:nth-child(17){
+    z-index: -10;
+    top: 71%;
+    left: 76%;
+}
+.wide > .container > h4:nth-child(18){
+    z-index: -2;
+    top: 47%;
+    left: 82%;
+}
+.wide > .container > h4:nth-child(19){
+    z-index: -1;
+    top: 60%;
+    left: 90%;
+    background: var(--accent);
+    box-shadow: inset 0px 24px 40px 0px #bed5ff ,0px -.48175px 2.21605px 0px #5e95fc0f,0px -1.83083px 8.4218px 0px #5e95fc3b,0px -8px 36.8px 0px #5e95fc;
+}
+.wide > .container > h4:nth-child(20){
+    z-index: -2;
+    top: 55%;
+    left: 98%;
+}
+
+section.title:not(.bgimage){
+    background-color: var(--textDarker);
+}
+
+section.wide > .container{
+    width: 70vw;
+    margin-left: calc(-35vw + 50%);
+}
+
+
+pre{
+    display: none;
+}

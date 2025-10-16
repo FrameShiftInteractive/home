@@ -1,0 +1,19 @@
+logo_image:
+menuitems:
+  - title: About
+    link:  /about/
+  - title: Contact
+    link:  /contact/
+  - title: Privacy policy
+    link:  /privacy-policy/
+socials:
+  - title: Facebook
+    link: https://facebook.com
+    logo_image: /img/facebook.svg
+  - title: Twitter
+    link: https://twitter.com
+    logo_image: /img/twitter.svg       
+  - title: Instagram
+    link: https://instagram.com
+    logo_image: /img/instagram.svg
+footer_text: "Bottom Text"

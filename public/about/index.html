@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title> | FrameShift Interactive </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+
+    <link rel="canonical" href="https://frameshift-interactive.github.io/site/about/" />
+    <link rel="shortcut icon" href="https://frameshift-interactive.github.io/site/uploads/branding/logo.svg"><link href="https://frameshift-interactive.github.io/site/css/style.css?version=2025-10-16%2016%3a18%3a30.1963014%20-0400%20EDT%20m%3d%2b0.178934201" rel="stylesheet">
+
+  </head>
+  <body id="top" class=" filename_about">
+    <script>      
+      function updateSize() {
+        if(window.innerWidth< 1100 ) document.body.classList.add('mobilemenu');
+        else document.body.classList.remove('mobilemenu');
+      }
+      updateSize();
+      window.addEventListener("resize", updateSize);
+    </script>
+    <div class="innerbody"><header class="">
+      <div class="container " onclick="document.body.classList.remove('menushown');">
+        <div>
+          <a href="https://frameshift-interactive.github.io/site/#top" class="logo">
+    
+        <div class="">
+            <img src="https://frameshift-interactive.github.io/site/uploads/branding/logo.svg" alt="FrameShift Interactive logo" class="inline black_2_textDark" />
+            <div>
+                <span>FrameShift Interactive</span>
+                
+            </div>
+        </div>
+    
+</a>
+        </div>
+        <div class="nav">
+          <nav class="navnav">
+            <ul>
+              
+                <li class=""><a href="https://frameshift-interactive.github.io/site/#about" onclick="navClick(event, this);">About</a>
+                  
+                </li>
+              
+                <li class=""><a href="https://frameshift-interactive.github.io/site/#services" onclick="navClick(event, this);">Services</a>
+                  
+                </li>
+              
+                <li class=""><a href="https://frameshift-interactive.github.io/site/#contact" onclick="navClick(event, this);">Contact</a>
+                  
+                </li>
+              
+            </ul>
+          </nav>
+        </div>
+        <div>
+        </div>
+        <button id="togglemenu" onclick="event.stopPropagation(); document.body.classList.add('menushown');"><span class="black_2_textDark">Toggle menu</span></button>
+        <script>
+          function navClick(event,el) {
+            var li = el.parentElement;
+            var ulContainer = li.parentElement;
+            ulContainer.querySelectorAll('li').forEach(child => {
+              child.classList.remove("active")
+            })
+
+            li.classList.add("active")
+            if(document.body.classList.contains('mobilemenu')) {
+              if (li.classList.contains('haschildren')) {
+                var ul = li.querySelector('ul');
+                if(ul) {
+                  if(window.getComputedStyle(ul).maxHeight == '0px') {
+                    var uls = document.querySelectorAll('nav ul ul');
+                    uls.forEach(function(u) {
+                      u.style.height = '0px';
+                      u.style.maxHeight = '0px';
+                    });
+                    ul.style.height = 'auto';
+                    ul.style.maxHeight = '700px';
+                    event.preventDefault();
+                    event.stopPropagation();
+                  }
+                }
+              }
+            }
+          }
+        </script>
+    </header>
+    
+<footer class="dark">
+      <div>
+        <div class="container">
+          <div>
+            <a href="https://frameshift-interactive.github.io/site/#top" class="logo">
+    
+        <div class="">
+            <img src="https://frameshift-interactive.github.io/site/uploads/branding/logo.svg" alt="FrameShift Interactive logo" class="inline black_2_textDark" />
+            <div>
+                <span>FrameShift Interactive</span>
+                
+            </div>
+        </div>
+    
+</a>
+          </div>
+          <div>
+            <ul>
+              
+                <li><a href="https://frameshift-interactive.github.io/site/about/">About</a></li>
+              
+                <li><a href="https://frameshift-interactive.github.io/site/contact/">Contact</a></li>
+              
+                <li><a href="https://frameshift-interactive.github.io/site/privacy-policy/">Privacy policy</a></li>
+              
+            </ul>  
+          </div>
+          <div>
+            <ul class="buttons social"><li><a href="https://facebook.com" class="button icon"><img src="https://frameshift-interactive.github.io/site/img/facebook.svg" alt="Facebook" /></a></li><li><a href="https://twitter.com" class="button icon"><img src="https://frameshift-interactive.github.io/site/img/twitter.svg" alt="Twitter" /></a></li><li><a href="https://instagram.com" class="button icon"><img src="https://frameshift-interactive.github.io/site/img/instagram.svg" alt="Instagram" /></a></li></ul>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="container">
+		      <div>Bottom Text</div></div>
+  		</div>
+		</footer>
+
+		
+      <script type="text/javascript" src="https://frameshift-interactive.github.io/site/js/stickyheader.js"></script>
+    
+    <script type="text/javascript" src="https://frameshift-interactive.github.io/site/js/faq.js"></script>
+    <script type="text/javascript" src="https://frameshift-interactive.github.io/site/js/lightbox.js"></script>
+		<link rel="stylesheet" href="https://frameshift-interactive.github.io/site/css/lightbox.css">
+    
+    
+      <script type="text/javascript" src="https://frameshift-interactive.github.io/site/js/intersectionobserver.js"></script>
+      <link rel="stylesheet" href="https://frameshift-interactive.github.io/site/css/intersectionobserver.css">
+    </div>
+  </body>
+</html>
